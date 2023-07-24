@@ -1,0 +1,644 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    min-height: 100vh;
+    line-height: 140%;
+}
+strong {
+    font-weight: bold;
+}
+p {
+    padding: 20px 10px;
+}
+i {
+    font-style: italic;
+}
+#content {
+    min-height: 100vh;
+}
+
+/* -------------------- Header -------------------- */
+
+header {
+    width: 100%;
+    background-color: #2a3138;
+    padding: 20px;
+    top: 0px;
+}
+header section {
+    float: left;
+    padding-right: 20px;
+}
+
+/* -------------------- Nav -------------------- */
+
+nav {
+    padding: 0.5% 5% 0.5% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 32px;
+}
+.nav-links {
+    float: right;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+}
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+.nav-links ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #50AD83;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+/* -------------------- End:Nav -------------------- */
+
+/* Small screens as 'default'*/
+#content {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Style buttons */
+#sign-up button, #profile button, input[type=submit] {
+    background-color: #50AD83;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.15em;
+    color: #f2f2f2;
+    padding: 10px 25px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    margin-top: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    box-shadow: 0 0 10px 0px #bbb;
+}
+#sign-up button:hover, #profile button:hover, input[type=submit]:hover {
+    box-shadow: 0 0 10px 0px #777;
+}
+
+
+/* 
+    *** IMPORTANT ***
+
+Pages Seek and Support are extra additions to the assignment to get a better 
+grasp of the content, practice and experiment. They may contain some values 
+which do not have a fallback method as they are not the required part of the
+assignment. Eg, flex values. 
+
+As mentioned further below, the intermediate screen width is set to display 
+content more evenly for scenarios where the window is placed in one half of
+the screen.
+*/
+
+
+/* -------------------- Page:Seek -------------------- */
+
+/* Search bar */
+#search-panel {
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #bbb;
+}
+#search-panel input {
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 15px;
+    border-style: solid;
+    padding: 5px 20px;
+    height: 100%;
+    width: 90%;
+}
+#search-panel input:focus {
+    outline: none;
+    border: 2px solid #50AD83;
+}
+#search-panel button {
+    display: none;
+}
+
+#content h1 {
+    text-align: center;
+    padding: 20px 0;
+    margin: 80px 20px;
+    font-size: 2.5em;
+    line-height: 100%;
+}
+.text-colour-highlight {
+    color: #50AD83;
+}
+
+/* Profile carousel */
+.carousel {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #bbb;
+}
+.carousel {
+    position: relative;
+    margin: 0 auto;
+}
+.profiles {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.carousel-profile {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.carousel-profile a {
+    color: black;
+}
+.nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #2a3138;
+    opacity: 0.5;
+    transition: opacity ease 250ms;
+}
+.nav a:hover {
+    background-color: #50AD83;
+    opacity: 1;
+}
+
+/* Sign-up */
+#sign-up {
+    margin-top: 50px;
+    margin-bottom: 30px;      
+}
+#sign-up p {
+    text-align: center;
+}
+#sign-up p:first-of-type {
+    font-size: 1.25em;
+    padding: 20px 0;
+}
+#sign-up h3 {
+    font-size: 1.75em;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* -------------------- End:Seek -------------------- */
+
+
+/* -------------------- Page:Support -------------------- */
+
+/* About */
+#about {
+    text-align: justify;
+}
+#about h2, #about h3 {
+    font-size: 2em;
+    padding: 20px 20px;
+    box-shadow: 0 10px 10px -12px #bbb;
+    text-align: center;
+}
+#about h4 {
+    text-align: center;
+    font-size: 1.75em;
+    margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+}
+#about ul {
+    margin: 0 30px;
+}
+#about ul li {
+    list-style: circle outside;
+    padding: 10px 10px
+}
+#about ul li:last-child {
+    margin-bottom: 40px;
+}
+#content h2 {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 40px;
+}
+
+/* Contact */
+#contact {
+    text-align: left;
+    align-items: center;
+    font-size: 1.25em;
+}
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-style: solid;
+    margin: 10px auto;
+    resize: vertical;
+}
+#contact input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #50AD83;
+}
+/* -------------------- End:Support -------------------- */
+
+
+/* -------------------- Page:Profile -------------------- */
+
+.panel {
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 10px 10px 20px #bbb;
+}
+
+/* Left Panel */
+#profile .details h1 {
+    margin: 10px auto;
+    margin-top: 20px;
+}
+#profile .details h2 {
+    font-size: 1.5em;
+    padding: 10px;
+}
+.details {    
+    text-align: center;
+}
+.details h1 {
+    padding: 0 0 10px 0;
+    box-shadow: 0 10px 10px -12px #bbb;
+}
+.details h2 {
+    font-size: 1.75em;
+    padding: 0;
+}
+.details h4 {
+    padding-bottom: 40px;
+}
+.details ul li {
+    padding: 10px 0;
+    font-size: 1.25em;
+}
+.details ul li:first-child {
+    margin-bottom: 20px;
+}
+.details img {
+    border-radius: 50%;
+    margin: 20px auto;
+    width: 200px;
+}
+#profile .details img {
+    margin-top: 40px;
+}
+
+/* Right Panel */
+.description {
+    padding: 10px 20px;
+    text-align: justify;
+}
+.description h3 {
+    font-size: 1.5em;
+    padding: 20px 20px;
+    box-shadow: 0 10px 10px -12px #bbb;
+    text-align: center;
+}
+.description h4 {
+    font-size: 1.25em;
+    padding: 20px 0 10px 20px;
+}
+.description ul li {
+    list-style-type: circle;
+    list-style-position: inside;
+    padding: 5px 20px
+}
+.description ul li:last-child {
+    padding-bottom: 20px;
+}
+.description p:last-child {
+    margin-bottom: 30px;
+}
+#tag {
+    text-align: center;
+}
+/* -------------------- End:Profile -------------------- */
+
+
+/* ------------------------------ Screen-Size:Intermediate ------------------------------ */
+/* Half screen adjustment to display content more evenly for profle*/
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    .nav-links ul li a {
+        font-size: 1.5em;
+    }
+
+    #search-panel input {
+        width: 80%;
+    }
+    /* Display search icon for larger screens */
+    #search-panel button {
+        display: inline;
+        height: 100%;
+        margin-left: 20px;
+        padding: 0 10px;
+        color: #50AD83;
+        opacity: .5;
+        background-color: transparent;
+        border-style: none;
+        border-radius: 50%;
+        font-size: 1.75em;
+    }
+    #search-panel button:hover {
+        opacity: 1;
+        box-shadow: none;
+        cursor: pointer;
+    }
+    
+
+    /* -------------------- Page:Profile -------------------- */
+    
+    #profile {
+        padding-left: 40px;
+        height: 100%;
+    }
+    #profile .panel {
+        margin-right: 20px;
+    }
+    #profile .panel:nth-child(odd) {
+        margin-left: -20px;
+        clear: left;
+    }
+    #profile .panel:nth-child(even) {
+        margin-right: 0px;
+    }
+    #profile {
+        height: 100vh;
+    }
+    /* Left Panel */
+    .details {
+        float: left;
+        width: 40%;
+        height: 100%;
+        overflow: auto;
+    }
+    .details img {
+        padding: 40px 0;
+        width: 60%;
+    }
+    .details ul li:first-child{
+        font-size: 1.25em;
+        padding-bottom: 60px;
+    }
+    .details ul li {
+        padding: 15px 0;
+    }
+    /* Right Panel */
+    #right-section {
+        float: left;
+        width: 60%;
+        height: 85%;
+        justify-content: center;
+    }
+    #right-section button {
+        margin: 0 auto;
+    }
+    #right-section button {
+        position: relative;
+        margin: 40px 20px;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+    .description {
+        overflow: auto;
+        height: 90%;
+        padding: 40px; 
+    }
+    .description h3 {
+        text-align: left;
+    }
+    /* -------------------- End:Profile -------------------- */
+}
+
+
+/* ------------------------------ Screen-Size:Large ------------------------------ */
+/* Large screens */
+
+@media (min-width: 900px) {
+
+    #wrapper {
+        height: 100%;]
+    }
+
+    .nav-links ul li a {
+        font-size: 1.5em;
+    }
+    
+    /* -------------------- Page:Seek -------------------- */  
+
+    /* Search Bar */
+    #search-panel {
+        width: 70%;
+    }
+    #search-panel input {
+        width: 80%;
+    }
+    #search-panel button {
+        display: inline;
+        height: 100%;
+        margin-left: 20px;
+        padding: 0 10px;
+        color: #50AD83;
+        opacity: .5;
+        background-color: transparent;
+        border-style: none;
+        border-radius: 50%;
+        font-size: 1.75em;
+    }
+    #search-panel button:hover {
+        opacity: 1;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    /* Profile Carousel */
+    .carousel {
+        width: 80%;
+        margin: 80px auto;
+    }
+    #profile-1, #profile-2, #profile-3 {
+        padding: 40px;
+        height: fit-content;
+    }
+    .details {
+        overflow: hidden;
+        padding: 20px 0;
+    }
+    .details a img {
+        max-width: 300px;
+        margin: 0;
+        padding: 0;
+    }
+    .details h2 {
+        font-size: 2.5em;
+        line-height: 100%;
+        padding-bottom: 10px;
+    }
+    .details h3 {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+    }
+    .description p {
+        margin: 0 30px;
+    }
+
+    #sign-up {
+        width: 60%;
+        margin: 40px auto;
+    }
+    /* -------------------- End:Seek -------------------- */
+
+
+    /* -------------------- Page:Support -------------------- */
+
+    #support .panel {
+        width: 80%;
+        margin: 40px auto;
+    }
+    #about p {
+        margin: 30px 60px;
+        line-height: 160%;
+        text-align: center;
+    }
+    #about ul li {
+        margin: 0 60px;
+    }
+    #about h4 {
+        padding: 20px;
+        margin: 40px auto;
+    }
+    #contact {
+        padding: 40px;
+    }
+    /* -------------------- End:Support -------------------- */
+
+
+    /* -------------------- Page:Profile -------------------- */
+
+    #profile {
+        padding-left: 40px;
+        height: 100%;
+    }
+    #profile .panel {
+        margin-right: 20px;
+    }
+    #profile .panel:nth-child(odd) {
+        margin-left: -20px;
+        clear: left;
+    }
+    #profile .panel:nth-child(even) {
+        margin-right: 0px;
+    }
+    #profile {
+        height: 100vh;
+    }
+    /* Left Panel */
+    .details {
+        float: left;
+        width: 30%;
+        height: 100%;
+        overflow: auto;
+    }
+    .details img {
+        padding: 40px 0;
+        width: 60%;
+    }
+    .details ul li:first-child{
+        font-size: 1.25em;
+        padding-bottom: 60px;
+    }
+    .details ul li {
+        padding: 15px 0;
+    }
+    /* Right Panel */
+    #right-section {
+        float: left;
+        width: 70%;
+        height: 85%;
+        justify-content: center;
+    }
+    #right-section button {
+        margin: 0 auto;
+    }
+    #right-section button {
+        position: relative;
+        margin: 40px 20px;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+    .description {
+        overflow: auto;
+        height: 90%;
+        padding: 40px; 
+    }
+    .description h3 {
+        text-align: left;
+    }   
+    /* -------------------- End:Profile -------------------- */
+}
+
+
+/* -------------------- Footer -------------------- */
+footer {
+    background-color: #2a3138;
+    text-align: right;
+    font-size: 1em;
+    color: #fff;
+    width: 100%;
+    padding: 2px;
+    position: relative;
+    bottom: 0;
+}
